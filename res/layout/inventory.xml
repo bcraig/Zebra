@@ -4,7 +4,7 @@
   android:orientation="vertical"
   android:layout_width="match_parent"
   android:layout_height="match_parent">
-    <Button android:text="Main Menu" android:id="@+id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="gotomain"></Button>
+    <Button android:text="Main Menu" android:id="@+id/imain" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
     <TextView android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content" android:id="@+id/textView1" android:text="Inventory Mode"></TextView>
     
 </LinearLayout>

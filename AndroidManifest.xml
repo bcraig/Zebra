@@ -14,6 +14,9 @@
             </intent-filter>
         </activity>
         <activity android:name="mainmenu"></activity>
+        <activity android:name="create"></activity>
+        <activity android:name="reprint"></activity>
+        <activity android:name="inventory"></activity>
         
     </application>
 </manifest>
