@@ -2,20 +2,22 @@ package com.zebra.android;
 import android.app.Activity; 
 import android.content.Intent;
 import android.os.Bundle;  
-public class ZebraActivity extends Activity {    
+import android.view.MotionEvent;
+public class ZebraActivity extends Activity {
+	
+	private Thread splashThread;
 	/** Called when the activity is first created. */
-	@Override   
+	@Override  
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);      
 		setContentView(R.layout.splash);       
-		Thread splashThread = new Thread() {       
+		splashThread = new Thread() {       
 			@Override         
 			public void run() {          
 				try {                
-					int waited = 0;             
-					while (waited < 5000) {   
-						sleep(100);             
-						waited += 100;                
+					synchronized(this){
+						//wait a period of time or exit on touch
+						wait(5000);
 					}             
 				} catch (InterruptedException e) {                
 					e.printStackTrace();
@@ -29,7 +31,15 @@ public class ZebraActivity extends Activity {
 			}       
 		};   
 		splashThread.start();    
-	} 
+	}
+	public boolean onTouchEvent(MotionEvent evt){
+		if(evt.getAction() == MotionEvent.ACTION_DOWN){
+			synchronized(splashThread){
+				splashThread.notifyAll();
+			}
+		}
+		return true;
+	}
 } 
 
 
