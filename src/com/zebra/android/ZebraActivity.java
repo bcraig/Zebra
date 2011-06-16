@@ -1,4 +1,3 @@
-//cleaned
 package com.zebra.android; 
 import android.app.Activity; 
 import android.content.Intent;
