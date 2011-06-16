@@ -4,9 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/hello"
-    />
+    <Button android:layout_width="match_parent" android:text="Create New Label" android:layout_height="wrap_content" android:id="@+id/button1" android:onClick="gotocreate"></Button>
+    <Button android:layout_width="match_parent" android:text="Reprint Label" android:layout_height="wrap_content" android:id="@+id/button2" android:onClick="gotoreprint"></Button>
+    <Button android:layout_width="match_parent" android:text="Inventory" android:layout_height="wrap_content" android:id="@+id/button3" android:onClick="gotoinventory"></Button>
 </LinearLayout>
