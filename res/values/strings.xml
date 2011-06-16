@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello">Hello World, ZebraActivity!</string>
-    <string name="app_name">ZebraInventory</string>
+    <string name="app_name">Zebra Asset Management</string>
 </resources>

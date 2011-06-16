@@ -7,13 +7,13 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class inventory extends Activity {
+public class Inventory extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.inventory);
 		
-		Button main = (Button) findViewById(R.id.imain);
-		main.setOnClickListener(new View.OnClickListener() {
+		Button ItoMain = (Button) findViewById(R.id.i_to_main);
+		ItoMain.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
 				Intent intent = new Intent();
         		setResult(RESULT_OK, intent);

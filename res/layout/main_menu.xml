@@ -5,6 +5,6 @@
     android:layout_height="fill_parent"
     >
     <Button android:layout_width="match_parent" android:text="Create New Label" android:layout_height="wrap_content" android:id="@+id/create"></Button>
-    <Button android:layout_width="match_parent" android:text="Reprint Label" android:layout_height="wrap_content" android:id="@+id/reprint"></Button>
+    <Button android:layout_width="match_parent" android:text="Reprint Label" android:layout_height="wrap_content" android:id="@+id/relabel"></Button>
     <Button android:layout_width="match_parent" android:text="Inventory" android:layout_height="wrap_content" android:id="@+id/inventory"></Button>
 </LinearLayout>

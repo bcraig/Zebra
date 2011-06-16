@@ -7,13 +7,13 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class reprint extends Activity {
+public class CreateLabel extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.reprint);
+		setContentView(R.layout.create_label);
 		
-		Button main = (Button) findViewById(R.id.rmain);
-		main.setOnClickListener(new View.OnClickListener() {
+		Button CtoMain = (Button) findViewById(R.id.c_to_main);
+		CtoMain.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
 				Intent intent = new Intent();
         		setResult(RESULT_OK, intent);

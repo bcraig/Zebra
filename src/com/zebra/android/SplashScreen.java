@@ -3,14 +3,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;  
 import android.view.MotionEvent;
-public class ZebraActivity extends Activity {
+public class SplashScreen extends Activity {
 	
 	private Thread splashThread;
 	/** Called when the activity is first created. */
 	@Override  
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);      
-		setContentView(R.layout.splash);       
+		setContentView(R.layout.splash_screen);       
 		splashThread = new Thread() {       
 			@Override         
 			public void run() {          
@@ -25,11 +25,11 @@ public class ZebraActivity extends Activity {
 					finish();              
 					Intent i = new Intent();  
 					i.setClassName("com.zebra.android",                  
-							"com.zebra.android.mainmenu");         
-					startActivity(i);             
+							"com.zebra.android.MainMenu");         
+					startActivity(i); 
 				}          
 			}       
-		};   
+		} ;
 		splashThread.start();    
 	}
 	public boolean onTouchEvent(MotionEvent evt){
