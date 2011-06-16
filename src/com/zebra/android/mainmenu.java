@@ -1,5 +1,4 @@
 package com.zebra.android;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +17,8 @@ public class mainmenu extends Activity {
 		i.setClassName("com.zebra.android",                  
 				"com.zebra.android.create");         
 		startActivity(i);  
+
     }
-    
 }
+
+
