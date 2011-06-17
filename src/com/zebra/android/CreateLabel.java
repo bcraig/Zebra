@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnFocusChangeListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -24,7 +25,18 @@ public class CreateLabel extends Activity {
 			}
 		});
 		
-		EditText serial = (EditText) findViewById(R.id.manual_serial);
+		final EditText serial = (EditText) findViewById(R.id.manual_serial);
+		serial.setOnFocusChangeListener(new OnFocusChangeListener(){
+			
+			public void onFocusChange(View v, boolean hasFocus){
+				if(hasFocus==true){
+					serial.setText("");
+				}
+			}
+		});
+		
+		
+		
 		if(serial.getText().toString().length()>=7){
 			//have serial
 			serialNumber = serial.getText().toString();

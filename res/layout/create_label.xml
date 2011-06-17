@@ -41,7 +41,7 @@
     	android:maxLength="7"
     	android:layout_alignRight="@id/serial_prompt"
     	android:ems="7"
-    	
+    	android:imeOptions="flagNoExtractUi"
     
         ><requestFocus></requestFocus>
     </EditText>
