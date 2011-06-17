@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, ZebraActivity!</string>
+    <string name="hello">Welcome to the Zebra Asset Management app! \n\n Select which task you would like to perform:</string>
     <string name="app_name">Zebra Asset Management</string>
+    <string name="copyright">© 2010 ZIH Corp. All rights reserved. Zebra Confidential for Internal Use Only.</string>
 </resources>

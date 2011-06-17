@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-    <Button android:layout_width="match_parent" android:text="Create New Label" android:layout_height="wrap_content" android:id="@+id/create"></Button>
-    <Button android:layout_width="match_parent" android:text="Reprint Label" android:layout_height="wrap_content" android:id="@+id/relabel"></Button>
-    <Button android:layout_width="match_parent" android:text="Inventory" android:layout_height="wrap_content" android:id="@+id/inventory"></Button>
-</LinearLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<TextView android:layout_width="match_parent" android:gravity="center_horizontal"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_height="wrap_content" android:text="@string/hello"
+		android:layout_alignParentLeft="true"
+		android:id="@+id/hello" ></TextView>
+	<Button android:layout_width="match_parent"
+		android:text="Create Label" 
+		android:layout_below="@id/hello" android:layout_height="wrap_content"
+		android:id="@+id/create"></Button>
+	<Button android:layout_width="match_parent" android:text="Reprint Label"
+		android:layout_below="@id/create" 
+		android:layout_height="wrap_content" android:id="@+id/relabel"></Button>
+	<Button android:layout_width="match_parent" android:text="Inventory"
+	android:layout_below="@id/relabel" 
+		android:layout_height="wrap_content" android:id="@+id/inventory"></Button>
+	<TextView android:layout_height="wrap_content" 
+		android:layout_alignParentBottom="true" android:text="@string/copyright"
+		android:id="@+id/copyright" android:layout_width="wrap_content"></TextView>
+</RelativeLayout>
