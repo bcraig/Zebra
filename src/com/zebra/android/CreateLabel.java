@@ -21,7 +21,7 @@ public class CreateLabel extends Activity {
 		setContentView(R.layout.create_label);
 		
 		
-		final Button CtoMain = (Button) findViewById(R.id.c_to_main);
+		Button CtoMain = (Button) findViewById(R.id.c_to_main);
 		CtoMain.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
 				Intent intent = new Intent();
@@ -31,8 +31,8 @@ public class CreateLabel extends Activity {
 		});
 		
 		serial = (EditText)findViewById(R.id.manual_serial);
-
 	}
+
 		
 	
 	public boolean onKey(View v, int keyCode, KeyEvent event){

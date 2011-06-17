@@ -9,13 +9,24 @@
 		android:gravity="center_horizontal" 
 		android:text="@string/reprint_heading" 
 		android:layout_width="match_parent"> </TextView>
+	<TextView 
+    	android:layout_width="wrap_content" 
+    	android:textSize="28.0sp"
+    	android:layout_height="wrap_content" 
+    	android:layout_below="@id/reprint_heading"
+    	android:gravity="center_vertical"
+    	android:id="@+id/reprint_serial_prompt" android:text="Enter Serial Number:" 
+    	android:layout_alignParentLeft="true"></TextView>
+    <EditText android:layout_width="wrap_content" 
+    	android:id="@+id/manual_reprint_serial" android:layout_height="wrap_content" 
+    	android:layout_below="@id/reprint_heading"
+    	android:layout_alignParentRight="true"
+    	android:maxLength="7"
+    	android:layout_alignRight="@id/reprint_serial_prompt"
+    	android:ems="7"
+    	android:imeOptions="flagNoExtractUi"></EditText>
 	<Button android:layout_height="wrap_content" android:id="@+id/r_to_main"
-		android:text="Main Menu" android:layout_width="wrap_content" android:layout_below="@id/reprint_heading" ></Button>
-	<TextView android:layout_width="wrap_content"
-		android:layout_below="@id/r_to_main"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_height="wrap_content" android:id="@+id/re_label_text1"
-		android:text="Reprint Mode"></TextView>
+		android:text="Main Menu" android:layout_width="wrap_content" android:layout_below="@id/reprint_serial_prompt" ></Button>
 <TextView android:layout_height="wrap_content" 
 		android:layout_alignParentBottom="true" android:text="@string/copyright"
 		android:textSize="10.0sp"
