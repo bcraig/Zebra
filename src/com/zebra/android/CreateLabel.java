@@ -2,6 +2,7 @@ package com.zebra.android;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnFocusChangeListener;
@@ -24,6 +25,19 @@ public class CreateLabel extends Activity {
         		finish();
 			}
 		});
+		
+	/*	Button LaunchScan = (Button) findViewById(R.id.create_scan);
+		LaunchScan.setOnClickListener(new View.OnClickListener() {			
+			public void onClick(View v) {
+				Intent i = new Intent();
+                i.setAction(Intent.ACTION_VIEW);
+                i.setClassName("com.xxx.your_package_name",
+                        "com.xxx.your_class_name");
+
+                startActivity(i);
+
+			}
+		});*/
 		
 		final EditText serial = (EditText) findViewById(R.id.manual_serial);
 		serial.setOnFocusChangeListener(new OnFocusChangeListener(){

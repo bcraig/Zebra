@@ -27,14 +27,20 @@
     	android:layout_alignRight="@id/serial_prompt"
     	android:ems="7"
     	android:imeOptions="flagNoExtractUi"></EditText>
+    <Button android:layout_width="wrap_content" 
+    	android:text="launch scanner" 
+    	android:layout_height="wrap_content" 
+    	android:layout_below="@+id/serial_prompt"
+    	android:id="@+id/create_scan" 
+    	android:layout_alignParentLeft="true"></Button>
     <Button android:text="Main Menu" 
     	android:id="@+id/c_to_main"
-    	android:layout_below="@id/serial_prompt"
+    	android:layout_above="@+id/copyright"
     	android:layout_width="wrap_content"
     	android:layout_height="wrap_content"></Button>
     <TextView android:layout_height="wrap_content" 
 		android:layout_alignParentBottom="true" android:text="@string/copyright"
 		android:textSize="10.0sp"
 		android:id="@+id/copyright" android:layout_width="wrap_content"></TextView>
- 
+    
 </RelativeLayout>
