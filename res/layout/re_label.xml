@@ -16,5 +16,8 @@
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_height="wrap_content" android:id="@+id/re_label_text1"
 		android:text="Reprint Mode"></TextView>
-
+<TextView android:layout_height="wrap_content" 
+		android:layout_alignParentBottom="true" android:text="@string/copyright"
+		android:textSize="10.0sp"
+		android:id="@+id/copyright" android:layout_width="wrap_content"></TextView>
 </RelativeLayout>

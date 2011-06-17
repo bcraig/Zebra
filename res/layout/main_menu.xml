@@ -21,5 +21,6 @@
 		android:layout_height="wrap_content" android:id="@+id/inventory"></Button>
 	<TextView android:layout_height="wrap_content" 
 		android:layout_alignParentBottom="true" android:text="@string/copyright"
+		android:textSize="10.0sp"
 		android:id="@+id/copyright" android:layout_width="wrap_content"></TextView>
 </RelativeLayout>
