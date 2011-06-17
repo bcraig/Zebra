@@ -2,5 +2,8 @@
 <resources>
     <string name="hello">Welcome to the Zebra Asset Management app! \n\n Select which task you would like to perform:</string>
     <string name="app_name">Zebra Asset Management</string>
-    <string name="copyright">© 2010 ZIH Corp. All rights reserved. Zebra Confidential for Internal Use Only.</string>
+    <string name="copyright">© 2011 ZIH Corp. All rights reserved. Zebra Confidential for Internal Use Only.</string>
+    <string name="reprint_heading">Reprint Label</string>
+    <string name="create_heading">Create Label</string>
+    <string name="inventory_heading">Inventory</string>
 </resources>

@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:orientation="vertical"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent">
-    <Button android:text="Main Menu" android:id="@+id/r_to_main" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-    <TextView android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content" android:id="@+id/re_label_text1" android:text="Reprint Mode"></TextView>
-    
-</LinearLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<TextView android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge" 
+		android:layout_alignParentTop="true"
+		android:id="@+id/reprint_heading"
+		android:gravity="center_horizontal" 
+		android:text="@string/reprint_heading" 
+		android:layout_width="match_parent"> </TextView>
+	<Button android:layout_height="wrap_content" android:id="@+id/r_to_main"
+		android:text="Main Menu" android:layout_width="wrap_content" android:layout_below="@id/reprint_heading" ></Button>
+	<TextView android:layout_width="wrap_content"
+		android:layout_below="@id/r_to_main"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_height="wrap_content" android:id="@+id/re_label_text1"
+		android:text="Reprint Mode"></TextView>
+
+</RelativeLayout>

@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:orientation="vertical"
   android:layout_width="match_parent"
   android:layout_height="match_parent">
-    <Button android:text="Main Menu" android:id="@+id/c_to_main" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-    <TextView android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content" android:id="@+id/create_text1" android:text="Create Label Mode"></TextView>
-    
-</LinearLayout>
+  	<TextView android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge" 
+		android:layout_alignParentTop="true"
+		android:id="@+id/create_heading"
+		android:gravity="center_horizontal" 
+		android:text="@string/create_heading" 
+		android:layout_width="match_parent"> </TextView>
+    <Button android:text="Main Menu" 
+    	android:id="@+id/c_to_main"
+    	android:layout_below="@id/create_heading"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"></Button>
+    <TextView android:layout_width="wrap_content" 
+    	android:textAppearance="?android:attr/textAppearanceLarge" 
+    	android:layout_height="wrap_content" 
+    	android:id="@+id/create_text1"
+    	android:layout_below="@id/c_to_main"
+    	android:text="Create Label Mode"></TextView>
+    <TextView android:layout_height="wrap_content" 
+		android:layout_alignParentBottom="true" android:text="@string/copyright"
+		android:id="@+id/copyright" android:layout_width="wrap_content"></TextView>
+</RelativeLayout>
