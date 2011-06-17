@@ -31,6 +31,8 @@ public class CreateLabel extends Activity {
 		});
 		
 		serial = (EditText)findViewById(R.id.manual_serial);
+		
+		
 	}
 
 		
