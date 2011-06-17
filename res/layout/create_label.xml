@@ -42,5 +42,15 @@
 		android:layout_alignParentBottom="true" android:text="@string/copyright"
 		android:textSize="10.0sp"
 		android:id="@+id/copyright" android:layout_width="wrap_content"></TextView>
-    
+    <Button android:text="Main Menu" 
+    	android:id="@+id/c_to_main"
+    	android:layout_below="@id/serial_prompt"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"></Button>
+    <TextView android:layout_height="wrap_content" 
+		android:layout_alignParentBottom="true" android:text="@string/copyright"
+		android:textSize="10.0sp"
+		android:id="@+id/copyright" android:layout_width="wrap_content"></TextView>
+ 
+>>>>>>> branch 'master' of ssh://git@github.com/bcraig/Zebra.git
 </RelativeLayout>
