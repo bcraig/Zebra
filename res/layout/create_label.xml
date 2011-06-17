@@ -41,6 +41,8 @@
     	android:maxLength="7"
     	android:layout_alignRight="@id/serial_prompt"
     	android:ems="7"
+    	
+    
         ><requestFocus></requestFocus>
     </EditText>
  
