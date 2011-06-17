@@ -19,21 +19,6 @@
     	android:gravity="center_vertical"
     	android:id="@+id/serial_prompt" android:text="Enter Serial Number:" 
     	android:layout_alignParentLeft="true"></TextView>
-    <Button android:text="Main Menu" 
-    	android:id="@+id/c_to_main"
-    	android:layout_below="@id/serial_prompt"
-    	android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"></Button>
-    <TextView android:layout_width="wrap_content" 
-    	android:textAppearance="?android:attr/textAppearanceLarge" 
-    	android:layout_height="wrap_content" 
-    	android:id="@+id/create_text1"
-    	android:layout_below="@id/c_to_main"
-    	android:text="Create Label Mode"></TextView>
-    <TextView android:layout_height="wrap_content" 
-		android:layout_alignParentBottom="true" android:text="@string/copyright"
-		android:textSize="10.0sp"
-		android:id="@+id/copyright" android:layout_width="wrap_content"></TextView>
     <EditText android:layout_width="wrap_content" 
     	android:id="@+id/manual_serial" android:layout_height="wrap_content" 
     	android:layout_below="@id/create_heading"
@@ -41,9 +26,15 @@
     	android:maxLength="7"
     	android:layout_alignRight="@id/serial_prompt"
     	android:ems="7"
-    	android:imeOptions="flagNoExtractUi"
-    
-        ><requestFocus></requestFocus>
-    </EditText>
+    	android:imeOptions="flagNoExtractUi"></EditText>
+    <Button android:text="Main Menu" 
+    	android:id="@+id/c_to_main"
+    	android:layout_below="@id/serial_prompt"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"></Button>
+    <TextView android:layout_height="wrap_content" 
+		android:layout_alignParentBottom="true" android:text="@string/copyright"
+		android:textSize="10.0sp"
+		android:id="@+id/copyright" android:layout_width="wrap_content"></TextView>
  
 </RelativeLayout>

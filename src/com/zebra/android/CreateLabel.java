@@ -36,13 +36,13 @@ public class CreateLabel extends Activity {
 		});
 		
 		
-		
+	/*	
 		if(serial.getText().toString().length()>=7){
 			//have serial
 			serialNumber = serial.getText().toString();
 			TextView text = (TextView) findViewById(R.id.create_text1);
 			text.setText(serialNumber);
-		}
+		}*/
 		
 	}
 }
