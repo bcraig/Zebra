@@ -30,7 +30,7 @@ public class CreateLabel extends Activity {
         		finish();
 			}
 		});
-		
+	}	
 
 	/*	Button LaunchScan = (Button) findViewById(R.id.create_scan);
 		LaunchScan.setOnClickListener(new View.OnClickListener() {			
@@ -44,8 +44,7 @@ public class CreateLabel extends Activity {
 
 			}
 		});*/
-		
-		final EditText serial = (EditText) findViewById(R.id.manual_serial);
+		/*serial = (EditText) findViewById(R.id.manual_serial);
 		serial.setOnFocusChangeListener(new OnFocusChangeListener(){
 			
 			public void onFocusChange(View v, boolean hasFocus){
@@ -53,7 +52,7 @@ public class CreateLabel extends Activity {
 					serial.setText("");
 				}
 			}
-		});
+		});*/
 
 
 		
@@ -64,9 +63,28 @@ public class CreateLabel extends Activity {
 			TextView text = (TextView) findViewById(R.id.create_text1);
 			text.setText(serialNumber);
 		}*/
-		
+	
+	/*code below from http://stackoverflow.com/questions/2050263/using-zxing-to-create-an-android-barcode-scanning-app */
+	public Button.OnClickListener mScan = new Button.OnClickListener() {
+		public void onClick(View v) {
+			Intent intent = new Intent("com.google.zxing.client.android.SCAN");
+			intent.putExtra("SCAN_MODE", "QR_CODE_MODE");
+			startActivityForResult(intent, 0); 
+		}
+	} ;  
+	public void onActivityResult(int requestCode, int resultCode, Intent intent) {     
+		if (requestCode == 0) {         
+			if (resultCode == RESULT_OK) {             
+				String contents = intent.getStringExtra("SCAN_RESULT");             
+				String format = intent.getStringExtra("SCAN_RESULT_FORMAT");             
+				// Handle successful scan         
+			} else if (resultCode == RESULT_CANCELED) {             
+				// Handle cancel         
+			}   
+		}
+	} 
 
-	}
+		
 
 		
 	
