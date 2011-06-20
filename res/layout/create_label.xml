@@ -29,6 +29,7 @@
     	android:imeOptions="flagNoExtractUi"></EditText>
     <Button android:layout_width="wrap_content" 
     	android:text="Launch Scanner" 
+    	android:onClick="startScanner"
     	android:layout_height="wrap_content" 
     	android:layout_below="@+id/serial_prompt"
     	android:id="@+id/create_scan" 
