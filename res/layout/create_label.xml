@@ -21,12 +21,20 @@
 		android:background="@drawable/zebra_technologies_barcode"
 	
 	/>
+	<TextView 
+    	android:textSize="10.0sp" 
+    	android:layout_width="fill_parent" 
+    	android:id="@+id/empty_space" 
+    	android:layout_height="wrap_content"
+    	android:layout_below="@id/barcode"
+    	android:text="" ></TextView> 
+		
 		
 	<TextView 
     	android:layout_width="wrap_content" 
     	android:textSize="28.0sp"
     	android:layout_height="wrap_content" 
-    	android:layout_below="@id/barcode"
+    	android:layout_below="@id/empty_space"
     	android:gravity="center_vertical"
     	android:id="@+id/serial_prompt" 
     	android:text="Enter Serial Number:" 
@@ -34,7 +42,7 @@
     <EditText android:layout_width="wrap_content" 
     	android:id="@+id/manual_serial" 
     	android:layout_height="wrap_content" 
-    	android:layout_below="@id/barcode"
+    	android:layout_below="@id/empty_space"
     	android:layout_alignParentRight="true"
     	android:maxLength="7"
     	android:layout_alignRight="@id/serial_prompt"
@@ -47,9 +55,18 @@
     	android:layout_height="wrap_content"
     	android:layout_below="@id/serial_prompt"
     	android:gravity="center_vertical" 
-    	android:text="Date" 
+    	android:text="date" 
+    	android:layout_alignParentRight="true"></TextView> 
+  	<TextView 
+    	android:textSize="28.0sp" 
+    	android:layout_width="wrap_content" 
+    	android:id="@+id/date_prompt" 
+    	android:layout_height="wrap_content"
+    	android:layout_below="@id/serial_prompt"
+    	android:gravity="center_vertical" 
+    	android:text="Today's Date is: " 
     	android:layout_alignParentLeft="true"></TextView> 
-    <Button android:layout_width="wrap_content" 
+    <Button android:layout_width="fill_parent" 
     	android:text="Launch Scanner" 
     	android:onClick="startScanner"
     	android:layout_height="wrap_content" 

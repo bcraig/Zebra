@@ -23,10 +23,18 @@
 	/>
 		
 	<TextView 
+    	android:textSize="10.0sp" 
+    	android:layout_width="fill_parent" 
+    	android:id="@+id/empty_space" 
+    	android:layout_height="wrap_content"
+    	android:layout_below="@id/barcode"
+    	android:text=" " ></TextView> 
+		
+	<TextView 
     	android:layout_width="wrap_content" 
     	android:textSize="28.0sp"
     	android:layout_height="wrap_content" 
-    	android:layout_below="@id/barcode"
+    	android:layout_below="@id/empty_space"
     	android:gravity="center_vertical"
     	android:id="@+id/reprint_serial_prompt" 
     	android:text="Enter Serial Number:" 
@@ -34,13 +42,13 @@
     <EditText android:layout_width="wrap_content" 
     	android:id="@+id/reprint_manual_serial" 
     	android:layout_height="wrap_content" 
-    	android:layout_below="@id/barcode"
+    	android:layout_below="@id/empty_space"
     	android:layout_alignParentRight="true"
     	android:maxLength="7"
     	android:layout_alignRight="@id/reprint_serial_prompt"
     	android:ems="7"
     	android:imeOptions="flagNoExtractUi"></EditText>
-    <Button android:layout_width="wrap_content" 
+    <Button android:layout_width="fill_parent" 
     	android:layout_alignParentLeft="true" 
     	android:text="Launch Scanner" 
     	android:id="@+id/rescan_scanner" 
