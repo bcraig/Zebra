@@ -78,6 +78,14 @@
     	android:onClick="startScanner"
     	android:layout_height="wrap_content"
     	android:layout_below="@id/inventory_date"></Button>
+    	
+   	<Button android:layout_width="fill_parent" 
+    	android:text="Update Inventory With Current Asset" 
+    	android:onClick="updateInventory"
+    	android:layout_height="wrap_content" 
+    	android:layout_below="@id/inventory_scanner"
+    	android:id="@+id/update_inventory" ></Button>	
+    	
 	<Button android:text="Main Menu" 
 		android:id="@+id/i_to_main"
 		android:layout_width="wrap_content" 

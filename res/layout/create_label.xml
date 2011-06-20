@@ -73,6 +73,12 @@
     	android:layout_below="@id/create_date"
     	android:id="@+id/create_scan" 
     	android:layout_alignParentLeft="true"></Button>
+     <Button android:layout_width="fill_parent" 
+    	android:text="Create Asset Record with Service-Now and Print Label" 
+    	android:onClick="createAsset"
+    	android:layout_height="wrap_content" 
+    	android:layout_below="@id/create_scan"
+    	android:id="@+id/send_and_print" ></Button>
     <Button android:text="Main Menu" 
     	android:id="@+id/c_to_main"
     	android:layout_above="@+id/copyright"
