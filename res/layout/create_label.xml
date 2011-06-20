@@ -40,11 +40,20 @@
     	android:layout_alignRight="@id/serial_prompt"
     	android:ems="7"
     	android:imeOptions="flagNoExtractUi"></EditText>
+    <TextView 
+    	android:textSize="28.0sp" 
+    	android:layout_width="wrap_content" 
+    	android:id="@+id/create_date" 
+    	android:layout_height="wrap_content"
+    	android:layout_below="@id/serial_prompt"
+    	android:gravity="center_vertical" 
+    	android:text="Date" 
+    	android:layout_alignParentLeft="true"></TextView> 
     <Button android:layout_width="wrap_content" 
     	android:text="Launch Scanner" 
     	android:onClick="startScanner"
     	android:layout_height="wrap_content" 
-    	android:layout_below="@+id/serial_prompt"
+    	android:layout_below="@id/create_date"
     	android:id="@+id/create_scan" 
     	android:layout_alignParentLeft="true"></Button>
     <Button android:text="Main Menu" 
@@ -57,5 +66,5 @@
 		android:text="@string/copyright"
 		android:textSize="10.0sp"
 		android:id="@+id/copyright" 
-		android:layout_width="wrap_content"></TextView> 
+		android:layout_width="wrap_content"></TextView>
 </RelativeLayout>

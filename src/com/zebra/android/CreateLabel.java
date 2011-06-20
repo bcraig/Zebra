@@ -1,20 +1,30 @@
 package com.zebra.android;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class CreateLabel extends Activity {
 	private EditText serial;
-	private final int DIALOG_SCAN_COMPLETE = 1;
-	private final String SCAN_CONTENTS_KEY = "key";
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.create_label);
+		
+		
+		Calendar ci = Calendar.getInstance();
+		String currentdate= (ci.get(Calendar.MONTH)+1) + "/" + ci.get(Calendar.DAY_OF_MONTH) + "/" + ci.get(Calendar.YEAR);
+		
+		TextView date =(TextView) findViewById(R.id.create_date);
+		date.setText(currentdate);
 		
 		
 		Button CtoMain = (Button) findViewById(R.id.c_to_main);
@@ -28,6 +38,11 @@ public class CreateLabel extends Activity {
 		
 		serial = (EditText) findViewById(R.id.manual_serial);
 	}	
+
+	private SimpleDateFormat SimpleDateFormat(String string, Locale us) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	/*	Button LaunchScan = (Button) findViewById(R.id.create_scan);
 		LaunchScan.setOnClickListener(new View.OnClickListener() {			
@@ -62,6 +77,11 @@ public class CreateLabel extends Activity {
 		}*/
 	
 	
+	/*private SimpleDateFormat SimpleDateFormat(String string, Locale us) {
+		// TODO Auto-generated method stub
+		return null;
+	}*/
+
 	public void startScanner(View v){
 		Intent intent = new Intent("com.google.zxing.client.android.SCAN");
 		intent.putExtra("com.google.zxing.client.android.SCAN.SCAN_MODE", 
@@ -81,7 +101,7 @@ public class CreateLabel extends Activity {
 		if (requestCode == 0) {         
 			if (resultCode == RESULT_OK) {             
 				String contents = intent.getStringExtra("SCAN_RESULT");             
-				String format = intent.getStringExtra("SCAN_RESULT_FORMAT");   
+				intent.getStringExtra("SCAN_RESULT_FORMAT");   
 			
 				serial.setText(contents);
 				// Handle successful scan 

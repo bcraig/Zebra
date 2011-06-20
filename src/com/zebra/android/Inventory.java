@@ -1,11 +1,14 @@
 package com.zebra.android;
 
+import java.util.Calendar;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class Inventory extends Activity {
@@ -14,6 +17,12 @@ public class Inventory extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.inventory);
+		
+		Calendar ci = Calendar.getInstance();
+		String currentdate= (ci.get(Calendar.MONTH)+1) + "/" + ci.get(Calendar.DAY_OF_MONTH) + "/" + ci.get(Calendar.YEAR);
+		
+		TextView date =(TextView) findViewById(R.id.inventory_date);
+		date.setText(currentdate);
 		
 		Button ItoMain = (Button) findViewById(R.id.i_to_main);
 		ItoMain.setOnClickListener(new View.OnClickListener() {
