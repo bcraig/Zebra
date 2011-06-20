@@ -11,11 +11,22 @@
 		android:gravity="center_horizontal" 
 		android:text="@string/reprint_heading" 
 		android:layout_width="match_parent"> </TextView>
+		
+	<ImageView 
+		android:layout_below="@id/reprint_heading"
+		android:layout_alignParentLeft="true"
+		android:layout_width="fill_parent"
+		android:id="@+id/barcode"
+		android:layout_height="14sp"
+		android:background="@drawable/zebra_technologies_barcode"
+	
+	/>
+		
 	<TextView 
     	android:layout_width="wrap_content" 
     	android:textSize="28.0sp"
     	android:layout_height="wrap_content" 
-    	android:layout_below="@id/reprint_heading"
+    	android:layout_below="@id/barcode"
     	android:gravity="center_vertical"
     	android:id="@+id/reprint_serial_prompt" 
     	android:text="Enter Serial Number:" 
@@ -23,7 +34,7 @@
     <EditText android:layout_width="wrap_content" 
     	android:id="@+id/reprint_manual_serial" 
     	android:layout_height="wrap_content" 
-    	android:layout_below="@id/reprint_heading"
+    	android:layout_below="@id/barcode"
     	android:layout_alignParentRight="true"
     	android:maxLength="7"
     	android:layout_alignRight="@id/reprint_serial_prompt"
