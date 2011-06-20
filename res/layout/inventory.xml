@@ -34,6 +34,7 @@
     	android:layout_alignParentLeft="true" 
     	android:text="Launch Scanner" 
     	android:id="@+id/inventory_scanner" 
+    	android:onClick="startScanner"
     	android:layout_height="wrap_content"
     	android:layout_below="@id/inventory_serial_prompt"></Button>
 	<Button android:text="Main Menu" 
