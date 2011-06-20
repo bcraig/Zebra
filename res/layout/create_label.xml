@@ -17,10 +17,12 @@
     	android:layout_height="wrap_content" 
     	android:layout_below="@id/create_heading"
     	android:gravity="center_vertical"
-    	android:id="@+id/serial_prompt" android:text="Enter Serial Number:" 
+    	android:id="@+id/serial_prompt" 
+    	android:text="Enter Serial Number:" 
     	android:layout_alignParentLeft="true"></TextView>
     <EditText android:layout_width="wrap_content" 
-    	android:id="@+id/manual_serial" android:layout_height="wrap_content" 
+    	android:id="@+id/manual_serial" 
+    	android:layout_height="wrap_content" 
     	android:layout_below="@id/create_heading"
     	android:layout_alignParentRight="true"
     	android:maxLength="7"
@@ -40,10 +42,9 @@
     	android:layout_width="wrap_content"
     	android:layout_height="wrap_content"></Button>
     <TextView android:layout_height="wrap_content" 
-		android:layout_alignParentBottom="true" android:text="@string/copyright"
+		android:layout_alignParentBottom="true" 
+		android:text="@string/copyright"
 		android:textSize="10.0sp"
-		android:id="@+id/copyright" android:layout_width="wrap_content"></TextView>
-
-
- 
+		android:id="@+id/copyright" 
+		android:layout_width="wrap_content"></TextView> 
 </RelativeLayout>

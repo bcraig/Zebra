@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical" android:layout_width="fill_parent"
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
 	android:layout_height="fill_parent">
 	<TextView android:layout_height="wrap_content"
 		android:textSize="32.0sp"
@@ -15,20 +17,33 @@
     	android:layout_height="wrap_content" 
     	android:layout_below="@id/reprint_heading"
     	android:gravity="center_vertical"
-    	android:id="@+id/reprint_serial_prompt" android:text="Enter Serial Number:" 
+    	android:id="@+id/reprint_serial_prompt" 
+    	android:text="Enter Serial Number:" 
     	android:layout_alignParentLeft="true"></TextView>
     <EditText android:layout_width="wrap_content" 
-    	android:id="@+id/manual_reprint_serial" android:layout_height="wrap_content" 
+    	android:id="@+id/manual_reprint_serial" 
+    	android:layout_height="wrap_content" 
     	android:layout_below="@id/reprint_heading"
     	android:layout_alignParentRight="true"
     	android:maxLength="7"
     	android:layout_alignRight="@id/reprint_serial_prompt"
     	android:ems="7"
     	android:imeOptions="flagNoExtractUi"></EditText>
-	<Button android:layout_height="wrap_content" android:id="@+id/r_to_main"
-		android:text="Main Menu" android:layout_width="wrap_content" android:layout_below="@id/reprint_serial_prompt" ></Button>
-<TextView android:layout_height="wrap_content" 
-		android:layout_alignParentBottom="true" android:text="@string/copyright"
+    <Button android:layout_width="wrap_content" 
+    	android:layout_alignParentLeft="true" 
+    	android:text="Launch Scanner" 
+    	android:id="@+id/rescan_scanner" 
+    	android:layout_height="wrap_content"
+    	android:layout_below="@id/reprint_serial_prompt"></Button>
+	<Button android:layout_height="wrap_content" 
+		android:id="@+id/r_to_main"
+		android:text="Main Menu" 
+		android:layout_width="wrap_content" 
+		android:layout_above="@+id/copyright"></Button>
+	<TextView android:layout_height="wrap_content" 
+		android:layout_alignParentBottom="true" 
+		android:text="@string/copyright"
 		android:textSize="10.0sp"
-		android:id="@+id/copyright" android:layout_width="wrap_content"></TextView>
+		android:id="@+id/copyright" 
+		android:layout_width="wrap_content"></TextView>
 </RelativeLayout>
