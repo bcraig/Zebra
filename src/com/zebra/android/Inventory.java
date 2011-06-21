@@ -45,7 +45,7 @@ public class Inventory extends Activity {
 		alertDialog.setMessage("Serial Number: "+ serial.getText());
 		alertDialog.setButton("Correct", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
-				// TODO Auto-generated method stub
+				// TODO 
 				return;
 			}
 		});
