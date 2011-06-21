@@ -48,13 +48,20 @@
     	android:layout_alignRight="@id/reprint_serial_prompt"
     	android:ems="7"
     	android:imeOptions="flagNoExtractUi"></EditText>
+    <TextView 
+    	android:textSize="10.0sp" 
+    	android:layout_width="fill_parent" 
+    	android:id="@+id/empty_space2" 
+    	android:layout_height="wrap_content"
+    	android:layout_below="@id/reprint_serial_prompt"
+    	android:text=" " ></TextView> 
     <Button android:layout_width="fill_parent" 
     	android:layout_alignParentLeft="true" 
     	android:text="Launch Scanner" 
     	android:id="@+id/rescan_scanner" 
     	android:onClick="startScanner"
     	android:layout_height="wrap_content"
-    	android:layout_below="@id/reprint_serial_prompt"></Button>
+    	android:layout_below="@id/empty_space2"></Button>
 	<Button android:layout_height="wrap_content" 
 		android:id="@+id/r_to_main"
 		android:text="Main Menu" 
