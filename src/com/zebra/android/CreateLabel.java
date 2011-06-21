@@ -4,6 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
+import com.google.zxing.integration.android.IntentIntegrator;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -106,11 +108,13 @@ public class CreateLabel extends Activity {
 	}*/
 
 	public void startScanner(View v){
-		Intent intent = new Intent("com.google.zxing.client.android.SCAN");
+		/*Intent intent = new Intent("com.google.zxing.client.android.SCAN");
 		intent.putExtra("com.google.zxing.client.android.SCAN.SCAN_MODE", 
 		"QR_CODE_MODE"); 
-		startActivityForResult(intent, 0);
+		startActivityForResult(intent, 0);*/
 		
+		
+		IntentIntegrator.initiateScan(CreateLabel.this); 
 	}
 	
 	/*code below from http://stackoverflow.com/questions/2050263/using-zxing-to-create-an-android-barcode-scanning-app */

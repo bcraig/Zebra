@@ -1,5 +1,7 @@
 package com.zebra.android;
 
+import com.google.zxing.integration.android.IntentIntegrator;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,11 +30,14 @@ public class ReLabel extends Activity {
 	}
 	
 	public void startScanner(View v){
-		Intent intent = new Intent("com.google.zxing.client.android.SCAN");
+		/*Intent intent = new Intent("com.google.zxing.client.android.SCAN");
 		intent.putExtra("com.google.zxing.client.android.SCAN.SCAN_MODE", 
 		"QR_CODE_MODE"); 
-		startActivityForResult(intent, 0);
+		startActivityForResult(intent, 0);*/
 		
+		
+		IntentIntegrator.initiateScan(ReLabel.this); 
+
 	}
 	
 	public void onActivityResult(int requestCode, int resultCode, Intent intent) {     

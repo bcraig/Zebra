@@ -2,6 +2,8 @@ package com.zebra.android;
 
 import java.util.Calendar;
 
+import com.google.zxing.integration.android.IntentIntegrator;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -61,11 +63,13 @@ public class Inventory extends Activity {
 	}
 	
 	public void startScanner(View v){
-		Intent intent = new Intent("com.google.zxing.client.android.SCAN");
+		/*Intent intent = new Intent("com.google.zxing.client.android.SCAN");
 		intent.putExtra("com.google.zxing.client.android.SCAN.SCAN_MODE", 
 		"QR_CODE_MODE"); 
-		startActivityForResult(intent, 0);
+		startActivityForResult(intent, 0);*/
 		
+		
+		IntentIntegrator.initiateScan(Inventory.this); 
 	}
 	
 	public void onActivityResult(int requestCode, int resultCode, Intent intent) {     
