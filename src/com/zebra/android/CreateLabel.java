@@ -17,13 +17,14 @@ import android.widget.TextView;
 
 public class CreateLabel extends Activity {
 	private EditText serial;
+	private String currentdate;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.create_label);
 		
 		
 		Calendar ci = Calendar.getInstance();
-		String currentdate= (ci.get(Calendar.MONTH)+1) + "/" + ci.get(Calendar.DAY_OF_MONTH) + "/" + ci.get(Calendar.YEAR);
+		currentdate= (ci.get(Calendar.MONTH)+1) + "/" + ci.get(Calendar.DAY_OF_MONTH) + "/" + ci.get(Calendar.YEAR);
 		
 		TextView date =(TextView) findViewById(R.id.create_date);
 		date.setText(currentdate);
@@ -49,7 +50,7 @@ public class CreateLabel extends Activity {
 	public void createAsset(View v){
 		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
 		alertDialog.setTitle("Verify Asset Information");
-		alertDialog.setMessage("Serial Number: "+ serial.getText());
+		alertDialog.setMessage("Serial Number: "+ serial.getText()+"\nDate: " + currentdate);
 		alertDialog.setButton("Correct", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				// TODO Auto-generated method stub
