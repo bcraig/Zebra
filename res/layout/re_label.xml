@@ -19,7 +19,6 @@
 		android:id="@+id/barcode"
 		android:layout_height="14sp"
 		android:background="@drawable/zebra_technologies_barcode"
-	
 	/>
 		
 	<TextView 

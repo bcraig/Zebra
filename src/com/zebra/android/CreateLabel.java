@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -124,25 +125,20 @@ public class CreateLabel extends Activity {
 		}
 	} ;  */
 
-	public void onActivityResult(int requestCode, int resultCode, Intent intent) {     
-		if (requestCode == 0) {         
-			if (resultCode == RESULT_OK) {             
-				String contents = intent.getStringExtra("SCAN_RESULT");             
-				intent.getStringExtra("SCAN_RESULT_FORMAT");   
-			
-				serial.setText(contents);
-				// Handle successful scan 
-
-				/*onCreateDialog(DIALOG_SCAN_COMPLETE, temp);
-				Bundle temp = new Bundle();
-				temp.putString(SCAN_CONTENTS_KEY, contents);*/
-
-
-				
-			} else if (resultCode == RESULT_CANCELED) {             
-				// Handle cancel         
-			}   
-		}
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) { 
+		switch(requestCode) { 
+			case IntentIntegrator.REQUEST_CODE: { 
+				if (resultCode != RESULT_CANCELED) { 
+					IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data); 
+					if (scanResult != null) { 
+						String number = scanResult.getContents(); 
+						// Do whatever you want with the barcode...
+						serial.setText(number);
+					} 
+				} 
+				break; 
+			} 
+		} 
 	} 
 	
 	/*protected Dialog onCreateDialog(int Id, Bundle args){
