@@ -42,6 +42,10 @@
 	<Button android:layout_width="match_parent" android:text="Inventory"
 	android:layout_below="@id/relabel" 
 		android:layout_height="wrap_content" android:id="@+id/inventory"></Button>
+	<Button android:layout_width="match_parent" android:text="Printer Connection"
+	android:layout_below="@id/inventory" 
+		android:layout_height="wrap_content" android:id="@+id/test_printer"></Button>
+		
 	<TextView android:layout_height="wrap_content" 
 		android:layout_alignParentBottom="true" android:text="@string/copyright"
 		android:textSize="10.0sp"

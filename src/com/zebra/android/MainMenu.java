@@ -13,26 +13,34 @@ public class MainMenu extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
     
-        Button createbutton = (Button) findViewById(R.id.create);
-        createbutton.setOnClickListener(new View.OnClickListener() {
+        Button createButton = (Button) findViewById(R.id.create);
+        createButton.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View view){
         		Intent i = new Intent(view.getContext(), CreateLabel.class);  
         		startActivityForResult(i, 0);  
         	}
         });
         
-        Button relabelbutton = (Button) findViewById(R.id.relabel);
-        relabelbutton.setOnClickListener(new View.OnClickListener() {
+        Button relabelButton = (Button) findViewById(R.id.relabel);
+        relabelButton.setOnClickListener(new View.OnClickListener() {
 		  	public void onClick(View view){
         		Intent i = new Intent(view.getContext(), ReLabel.class);  
         		startActivityForResult(i, 0);  
         	}
         });
         
-        Button inventorybutton = (Button) findViewById(R.id.inventory);
-        inventorybutton.setOnClickListener(new View.OnClickListener() {
+        Button inventoryButton = (Button) findViewById(R.id.inventory);
+        inventoryButton.setOnClickListener(new View.OnClickListener() {
 		  	public void onClick(View view){
         		Intent i = new Intent(view.getContext(), Inventory.class);  
+        		startActivityForResult(i, 0);  
+        	}
+        });
+        
+        Button printerButton = (Button) findViewById(R.id.test_printer);
+        printerButton.setOnClickListener(new View.OnClickListener() {
+		  	public void onClick(View view){
+        		Intent i = new Intent(view.getContext(), ConnectionScreen.class);  
         		startActivityForResult(i, 0);  
         	}
         });

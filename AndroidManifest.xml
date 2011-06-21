@@ -17,6 +17,7 @@
         <activity android:name=".CreateLabel"></activity>
         <activity android:name=".ReLabel"></activity>
         <activity android:name=".Inventory"></activity>
+        <activity android:name=".ConnectionScreen"></activity>
         
     </application>
 </manifest>

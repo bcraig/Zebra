@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  
+  <TextView android:layout_height="wrap_content"
+		android:textSize="32.0sp"
+		android:layout_alignParentTop="true"
+		android:id="@+id/printer_heading"
+		android:gravity="center_horizontal" 
+		android:text="Printer Connection" 
+		android:layout_width="match_parent"> </TextView>
+		
+	<ImageView 
+		android:layout_below="@id/printer_heading"
+		android:layout_alignParentLeft="true"
+		android:layout_width="fill_parent"
+		android:id="@+id/barcode"
+		android:layout_height="14sp"
+		android:background="@drawable/zebra_technologies_barcode"
+	/>
+	
+	<TextView 
+    	android:textSize="10.0sp" 
+    	android:layout_width="fill_parent" 
+    	android:id="@+id/empty_space" 
+    	android:layout_height="wrap_content"
+    	android:layout_below="@id/barcode"
+    	android:text="" ></TextView> 
+    	
+    
+  	<TextView 
+    	android:layout_width="fill_parent" 
+    	android:textSize="28.0sp"
+    	android:layout_height="wrap_content" 
+    	android:layout_below="@id/empty_space"
+    	android:gravity="center_vertical"
+    	android:id="@+id/status_field" 
+    	android:text="Printer Status" 
+    	android:layout_alignParentLeft="true"></TextView>
+    	
+   	<TextView 
+    	android:layout_width="wrap_content" 
+    	android:textSize="28.0sp"
+    	android:layout_height="wrap_content" 
+    	android:layout_below="@id/status_field"
+    	android:gravity="center_vertical"
+    	android:id="@+id/mac_prompt" 
+    	android:text="MAC Address:" 
+    	android:layout_alignParentLeft="true"></TextView>
+    	
+    <EditText android:layout_width="wrap_content" 
+    	android:id="@+id/mac_input" 
+    	android:layout_height="wrap_content" 
+    	android:layout_below="@id/status_field"
+    	android:layout_alignParentRight="true"
+    	android:maxLength="17"
+    	android:layout_alignRight="@id/mac_prompt"
+    	android:imeOptions="flagNoExtractUi"></EditText>
+   	
+   	<Button android:layout_width="fill_parent" 
+    	android:text="Test Printer Connection" 
+    	android:layout_height="wrap_content" 
+    	android:layout_below="@id/mac_input"
+    	android:id="@+id/test_button" ></Button>
+   	
+   	
+   	
+   	<TextView android:layout_height="wrap_content" 
+		android:layout_alignParentBottom="true" 
+		android:text="@string/copyright"
+		android:textSize="10.0sp"
+		android:id="@+id/copyright" 
+		android:layout_width="wrap_content"></TextView>
+
+    	
+</RelativeLayout>
