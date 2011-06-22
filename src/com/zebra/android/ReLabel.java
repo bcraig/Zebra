@@ -31,12 +31,6 @@ public class ReLabel extends Activity {
 	}
 	
 	public void startScanner(View v){
-		/*Intent intent = new Intent("com.google.zxing.client.android.SCAN");
-		intent.putExtra("com.google.zxing.client.android.SCAN.SCAN_MODE", 
-		"QR_CODE_MODE"); 
-		startActivityForResult(intent, 0);*/
-		
-		
 		IntentIntegrator.initiateScan(ReLabel.this); 
 
 	}

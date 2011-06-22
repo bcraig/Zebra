@@ -19,8 +19,8 @@ import android.widget.TextView;
 
 
 public class CreateLabel extends Activity {
-	private EditText serial;
-	private String currentdate;
+	private EditText serial; 		//field where user can enter the serial number of the new asset 
+	private String currentdate;     //automatically generated current date
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.create_label);
@@ -71,60 +71,13 @@ public class CreateLabel extends Activity {
 
 	}
 	
-	/*	Button LaunchScan = (Button) findViewById(R.id.create_scan);
-		LaunchScan.setOnClickListener(new View.OnClickListener() {			
-			public void onClick(View v) {
-				Intent i = new Intent();
-                i.setAction(Intent.ACTION_VIEW);
-                i.setClassName("com.xxx.your_package_name",
-                        "com.xxx.your_class_name");
-
-                startActivity(i);
-
-			}
-		});*/
-		/*serial = (EditText) findViewById(R.id.manual_serial);
-		serial.setOnFocusChangeListener(new OnFocusChangeListener(){
-			
-			public void onFocusChange(View v, boolean hasFocus){
-				if(hasFocus==true){
-					serial.setText("");
-				}
-			}
-		});*/
-
 
 		
-	/*	
-		if(serial.getText().toString().length()>=7){
-			//have serial
-			serialNumber = serial.getText().toString();
-			TextView text = (TextView) findViewById(R.id.create_text1);
-			text.setText(serialNumber);
-		}*/
-	
-	
-	/*private SimpleDateFormat SimpleDateFormat(String string, Locale us) {
-		// TODO Auto-generated method stub
-		return null;
-	}*/
 
-	public void startScanner(View v){
-		/*Intent intent = new Intent("com.google.zxing.client.android.SCAN");
-		intent.putExtra("com.google.zxing.client.android.SCAN.SCAN_MODE", 
-		"QR_CODE_MODE"); 
-		startActivityForResult(intent, 0);*/
-		
-		
+	public void startScanner(View v){		
 		IntentIntegrator.initiateScan(CreateLabel.this); 
 	}
 	
-	/*code below from http://stackoverflow.com/questions/2050263/using-zxing-to-create-an-android-barcode-scanning-app */
-	/*public Button.OnClickListener mScan = new Button.OnClickListener() {
-		public void onClick(View v) {
-			
-		}
-	} ;  */
 
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) { 
 		switch(requestCode) { 
@@ -142,42 +95,13 @@ public class CreateLabel extends Activity {
 		} 
 	} 
 	
-	/*protected Dialog onCreateDialog(int Id, Bundle args){
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setMessage(getSerialFieldText()).setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int id) {
-				//MyActivity.this.finish();           
-				}
-			}).setNegativeButton("No", new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int id) {                
-				dialog.cancel();           
-				}       
-			});AlertDialog alert = builder.create();
-			return alert;
-	}
-	protected void onPrepareDialog(int Id, Bundle args, Dialog dialog){
-		
-	}
-
-		
 	
-	public boolean onKey(View v, int keyCode, KeyEvent event){
-		if((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)){
-			//enter key pressed
-			String serialNumber = serial.getText().toString();
-			
-			
-			
-			return true;
-		}
-		return false;
-	}
 	
 	private void toggleEditField(EditText editText, boolean set) {
 		/*
 		 * Note: Disabled EditText fields may still get focus by some other means, and allow text input.
 		 *       See http://code.google.com/p/android/issues/detail?id=2771
-		 *
+		 **/
 		editText.setEnabled(set);
 		editText.setFocusable(set);
 		editText.setFocusableInTouchMode(set);
@@ -185,5 +109,4 @@ public class CreateLabel extends Activity {
     private String getSerialFieldText() {
         return serial.getText().toString();
     }
-	*/
 }
