@@ -67,7 +67,11 @@
     	android:layout_below="@id/mac_input"
     	android:id="@+id/test_button" ></Button>
    	
-   	
+   	<Button android:text="Main Menu" 
+		android:id="@+id/p_to_main"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/copyright"></Button>
    	
    	<TextView android:layout_height="wrap_content" 
 		android:layout_alignParentBottom="true" 

@@ -16,6 +16,7 @@ package com.zebra.android;
 
 import android.app.Activity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 
@@ -87,7 +88,15 @@ public class ConnectionScreen extends Activity {
         });
         
         toggleEditField(macAddress, true);
-
+        
+        Button PtoMain = (Button) findViewById(R.id.p_to_main);
+		PtoMain.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View view) {
+				Intent intent = new Intent();
+        		setResult(RESULT_OK, intent);
+        		finish();
+			}
+		});
     }
 
     private void toggleEditField(EditText editText, boolean set) {
