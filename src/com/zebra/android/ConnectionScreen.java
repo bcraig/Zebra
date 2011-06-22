@@ -18,8 +18,6 @@ import android.app.Activity;
 
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.content.Intent;
-
 
 import android.os.Bundle;
 import android.os.Looper;
@@ -30,7 +28,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.RadioButton;
 
 import com.zebra.android.comm.BluetoothPrinterConnection;
 import com.zebra.android.comm.ZebraPrinterConnection;
@@ -49,7 +46,6 @@ public class ConnectionScreen extends Activity {
     protected ZebraPrinterConnection zebraPrinterConnection;
     protected ZebraPrinter printer;
     protected Button testButton;
-    private RadioButton btRadioButton;
     private EditText macAddress;
     private TextView statusField;
 
@@ -80,10 +76,21 @@ public class ConnectionScreen extends Activity {
         
         testButton = (Button) this.findViewById(R.id.test_button);
         testButton.setOnClickListener(new OnClickListener() {
+
             public void onClick(View v) {
-                performTest();
+                new Thread(new Runnable() {
+                    public void run() {
+                        enableTestButton(false);
+                        Looper.prepare();
+                        doConnectionTest();
+                        Looper.loop();
+                        Looper.myLooper().quit();
+                    }
+                }).start();
             }
         });
+        
+        toggleEditField(macAddress, true);
 
     }
 
@@ -97,20 +104,9 @@ public class ConnectionScreen extends Activity {
         editText.setFocusableInTouchMode(set);
     }
 
-    protected boolean isBluetoothSelected() {
-        return btRadioButton.isChecked();
-    }
 
     protected String getMacAddressFieldText() {
         return macAddress.getText().toString();
-    }
-
-    public void performTest(){
-    	enableTestButton(false);
-        Looper.prepare();
-        doConnectionTest();
-        Looper.loop();
-        Looper.myLooper().quit();
     }
     
     private void enableTestButton(final boolean enabled) {
@@ -150,7 +146,7 @@ public class ConnectionScreen extends Activity {
         setStatus("Connecting...", Color.YELLOW);
         zebraPrinterConnection = null;
         zebraPrinterConnection = new BluetoothPrinterConnection(getMacAddressFieldText());
-        SettingsHelper.saveBluetoothAddress(this, getMacAddressFieldText());
+        //SettingsHelper.saveBluetoothAddress(this, getMacAddressFieldText());
         
         try {
             zebraPrinterConnection.open();
