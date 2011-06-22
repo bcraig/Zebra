@@ -49,6 +49,7 @@
     	android:maxLength="7"
     	android:layout_alignRight="@id/inventory_serial_prompt"
     	android:ems="7"
+    	android:singleLine="true"
     	android:imeOptions="flagNoExtractUi"></EditText>
     	
 	<TextView 

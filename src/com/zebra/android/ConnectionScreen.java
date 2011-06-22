@@ -50,11 +50,7 @@ public class ConnectionScreen extends Activity {
     private TextView statusField;
 
     
-    
     public static final String bluetoothAddressKey = "ZEBRA_DEMO_BLUETOOTH_ADDRESS";
-    
-    public static final String tcpAddressKey = "ZEBRA_DEMO_TCP_ADDRESS";
-    public static final String tcpPortKey = "ZEBRA_DEMO_TCP_PORT";
     public static final String PREFS_NAME = "OurSavedAddress";
 
     @Override
