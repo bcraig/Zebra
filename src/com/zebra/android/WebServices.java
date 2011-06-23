@@ -50,7 +50,7 @@ public class WebServices {
         			response = client.execute(post);                     
         			/*Checking response */                     
         			if(response!=null){  
-        				InputStream in = response.getEntity().getContent(); //Get the data in the entity                  
+        				InputStream in = response.getEntity().getContent(); //Get the data in the entity   
         			}                 
         		}
         		catch(Exception e){                     
