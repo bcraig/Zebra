@@ -18,6 +18,6 @@
         <activity android:name=".ReLabel"></activity>
         <activity android:name=".Inventory"></activity>
         <activity android:name=".ConnectionScreen"></activity>
-        
+        <activity android:name=".SettingsHelper"></activity>        
     </application>
 </manifest>

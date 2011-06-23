@@ -16,6 +16,9 @@ package com.zebra.android;
 
 import android.app.Activity;
 
+import com.zebra.android.MainMenu;
+import com.zebra.android.SettingsHelper;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -63,8 +66,8 @@ public class ConnectionScreen extends Activity {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 
         macAddress = (EditText) this.findViewById(R.id.mac_input);
-        String mac = settings.getString(bluetoothAddressKey, "");    
-        macAddress.setText(mac);
+        MainMenu.Bluetooth_Mac_Address = settings.getString(bluetoothAddressKey, "");    
+        macAddress.setText(MainMenu.Bluetooth_Mac_Address);
         
         statusField = (TextView) this.findViewById(R.id.status_field);
         setStatus("Not Connected", Color.RED);
@@ -77,6 +80,7 @@ public class ConnectionScreen extends Activity {
             public void onClick(View v) {
                 new Thread(new Runnable() {
                     public void run() {
+                    	MainMenu.Bluetooth_Mac_Address = macAddress.getText().toString();
                         enableTestButton(false);
                         Looper.prepare();
                         doConnectionTest();
@@ -151,7 +155,7 @@ public class ConnectionScreen extends Activity {
         setStatus("Connecting...", Color.YELLOW);
         zebraPrinterConnection = null;
         zebraPrinterConnection = new BluetoothPrinterConnection(getMacAddressFieldText());
-        //SettingsHelper.saveBluetoothAddress(this, getMacAddressFieldText());
+        SettingsHelper.saveBluetoothAddress(this, getMacAddressFieldText());
         
         try {
             zebraPrinterConnection.open();

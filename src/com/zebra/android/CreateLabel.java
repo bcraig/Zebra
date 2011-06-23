@@ -53,7 +53,7 @@ public class CreateLabel extends Activity {
 	public void createAsset(View v){
 		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
 		alertDialog.setTitle("Verify Asset Information");
-		alertDialog.setMessage("Serial Number: "+ serial.getText()+"\nDate: " + currentdate);
+		alertDialog.setMessage("Serial Number: "+ serial.getText()+"\nDate: " + currentdate+"\nBluetooth address:" + MainMenu.Bluetooth_Mac_Address);
 		alertDialog.setButton("Correct", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				// TODO Auto-generated method stub
