@@ -1,10 +1,11 @@
 package com.zebra.android;
 
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-import com.google.gson.*;
+import com.google.gson.Gson;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -22,9 +23,16 @@ import android.widget.TextView;
 public class CreateLabel extends Activity {
 	private EditText serial; 		//field where user can enter the serial number of the new asset 
 	private String currentdate;     //automatically generated current date
+	private WebServices webServices;
+	private AlertDialog alertDialog;
+	public static AlertDialog connectionAlertDialog;
+
+	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.create_label);
+		
+		webServices = new WebServices();
 		
 		
 		Calendar ci = Calendar.getInstance();
@@ -44,6 +52,13 @@ public class CreateLabel extends Activity {
 		});
 		
 		serial = (EditText) findViewById(R.id.manual_serial);
+		
+		
+		
+		connectionAlertDialog = new AlertDialog.Builder(this).create();
+		connectionAlertDialog.setTitle("Connection Problem");
+		connectionAlertDialog.setMessage("Connection to Service Now timed out");
+		connectionAlertDialog.setButton("Okay", new DialogInterface.OnClickListener(){public void onClick(DialogInterface dialog, int which){return;}});
 	}	
 
 	private SimpleDateFormat SimpleDateFormat(String string, Locale us) {
@@ -52,12 +67,18 @@ public class CreateLabel extends Activity {
 	}
 
 	public void createAsset(View v){
-		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+		
+		
+		
+		alertDialog = new AlertDialog.Builder(this).create();
 		alertDialog.setTitle("Verify Asset Information");
 		alertDialog.setMessage("Serial Number: "+ serial.getText()+"\nDate: " + currentdate);
 		alertDialog.setButton("Correct", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				// TODO Auto-generated method stub
+
+				webServices.createAsset(serial.getText().toString());
+				
 				return;
 			}
 		});
@@ -72,7 +93,6 @@ public class CreateLabel extends Activity {
 
 	}
 	
-
 		
 
 	public void startScanner(View v){		
