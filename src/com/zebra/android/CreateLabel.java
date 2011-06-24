@@ -18,7 +18,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
+import android.util.Log;
 
 public class CreateLabel extends Activity {
 	private EditText serial; 		//field where user can enter the serial number of the new asset 
@@ -26,7 +26,7 @@ public class CreateLabel extends Activity {
 	private WebServices webServices;
 	private AlertDialog alertDialog;
 	public static AlertDialog connectionAlertDialog;
-
+	public String LOG_TAG = "SN LOG";
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -59,6 +59,9 @@ public class CreateLabel extends Activity {
 		connectionAlertDialog.setTitle("Connection Problem");
 		connectionAlertDialog.setMessage("Connection to Service Now timed out");
 		connectionAlertDialog.setButton("Okay", new DialogInterface.OnClickListener(){public void onClick(DialogInterface dialog, int which){return;}});
+		
+		int mInt=0;
+		Log.d(LOG_TAG , "mInt value: "+mInt);
 	}	
 
 	private SimpleDateFormat SimpleDateFormat(String string, Locale us) {
