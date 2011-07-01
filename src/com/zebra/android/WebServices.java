@@ -25,10 +25,13 @@ import org.apache.http.params.HttpParams;
 import org.apache.http.protocol.ExecutionContext;
 import org.apache.http.protocol.HTTP;*/
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.ksoap2.HeaderProperty;
 import org.ksoap2.SoapEnvelope;
 import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
-import org.ksoap2.transport.HttpTransportSE;
 
 
 public class WebServices {
@@ -57,6 +60,7 @@ public class WebServices {
 		
 		SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
 		request.addProperty("serial_number", serialNumber);
+		//request.addProperty("Authorization","Basic YmNyYWlnOmNoaWNhZ28=" );
 		
 		SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
 		envelope.dotNet=false;
@@ -64,17 +68,13 @@ public class WebServices {
 		
 		HttpTransportSE androidHttpTransport = new HttpTransportSE(URL);
 		androidHttpTransport.debug=true;
-		//androidHttpTransport.setXmlVersionTag("1.0");
-
-		//Prepare the header with the authentication data.
-		//Element header = new Element().createElement(NAMESPACE, "Authorization: Basic YmNyYWlnOmNoaWNhZ28=");
-
-		//add header to envelope
-		//envelope.headerOut = new Element[]{header};
+		
+		List<HeaderProperty> headers = new ArrayList<HeaderProperty>(); 
+		headers.add(new HeaderProperty("Authorization", "Basic YmNyYWlnOmNoaWNhZ28=")); 
 		
 		
 		try{
-			androidHttpTransport.call(SOAP_ACTION, envelope);
+			androidHttpTransport.call(SOAP_ACTION, envelope,headers);
 			Object result = (Object)envelope.getResponse();
 			String resultData = result.toString();
 			
