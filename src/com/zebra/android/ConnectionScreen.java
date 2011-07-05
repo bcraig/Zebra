@@ -39,6 +39,8 @@ import com.zebra.android.printer.PrinterLanguage;
 import com.zebra.android.printer.ZebraPrinterFactory;
 import com.zebra.android.printer.ZebraPrinterLanguageUnknownException;
 
+import com.zebra.android.SettingsHelper;
+
 
 
 public class ConnectionScreen extends Activity {
@@ -142,7 +144,7 @@ public class ConnectionScreen extends Activity {
         setStatus("Connecting...", Color.YELLOW);
         zebraPrinterConnection = null;
         zebraPrinterConnection = new BluetoothPrinterConnection(getMacAddressFieldText());
-        //SettingsHelper.saveBluetoothAddress(this, getMacAddressFieldText());
+        SettingsHelper.saveBluetoothAddress(this, getMacAddressFieldText());
         
         try {
             zebraPrinterConnection.open();
