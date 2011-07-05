@@ -135,7 +135,7 @@ public class ConnectionScreen extends Activity {
         } catch (ZebraPrinterConnectionException e) {
             setStatus(e.getMessage(), Color.RED);
         } finally {
-            disconnect();
+            //disconnect();
         }
     }
     public ZebraPrinter connect() {
