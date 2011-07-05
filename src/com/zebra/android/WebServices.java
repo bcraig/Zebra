@@ -50,33 +50,30 @@ public class WebServices {
 		timeout = 10000;
 		/*String val = (new StringBuffer("username").append(":").append("password")).toString();
 		byte[] base = val.getBytes();*/
-		//authorizationString = "Basic " + (Base64.encode("bcraig:chicago".getBytes(), 0));
-		
+		//authorizationString = "Basic " + (Base64.encode("bcraig:chicago".getBytes(), 0))
 
 	}
-
 	
 	public void createAsset(String serialNumber){
 		
 		SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
-		request.addProperty("serial_number", serialNumber);
-		//request.addProperty("Authorization","Basic YmNyYWlnOmNoaWNhZ28=" );
-		
+		request.addProperty("serial_number", serialNumber);		
 		SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
 		envelope.dotNet=false;
 		envelope.setOutputSoapObject(request);        
-		
 		HttpTransportSE androidHttpTransport = new HttpTransportSE(URL);
 		androidHttpTransport.debug=true;
-		
 		List<HeaderProperty> headers = new ArrayList<HeaderProperty>(); 
-		headers.add(new HeaderProperty("Authorization", "Basic YmNyYWlnOmNoaWNhZ28=")); 
-		
+		headers.add(new HeaderProperty("Authorization", "Basic bWVyaWNrc29uOmNoaWNhZ28=")); 
 		
 		try{
 			androidHttpTransport.call(SOAP_ACTION, envelope,headers);
-			Object result = (Object)envelope.getResponse();
-			String resultData = result.toString();
+	
+			SoapObject result =(SoapObject)envelope.getResponse();
+			String resultData =result.getProperty(0).toString();
+			
+			//Object result = envelope.headerIn;
+			//String resultData = result.toString();
 			
 			CreateLabel.connectionAlertDialog.setMessage(resultData);
 			CreateLabel.connectionAlertDialog.show();

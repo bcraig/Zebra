@@ -79,8 +79,12 @@ public class CreateLabel extends Activity {
 		alertDialog.setButton("Correct", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				// TODO Auto-generated method stub
-
+				
+				//create record with service now
 				webServices.createAsset(serial.getText().toString());
+				
+				//print new asset tag
+				
 				
 				return;
 			}
