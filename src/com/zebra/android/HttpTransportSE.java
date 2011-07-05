@@ -122,8 +122,6 @@ public class HttpTransportSE extends Transport {
 		responseDump = null;
 
 		connection = getServiceConnection();
-		connection.setRequestProperty("Authorization", "Basic YmNyYWlnOmNoaWNhZ28=");
-
 
 		
 		connection.setRequestProperty("User-Agent", "kSOAP/2.0");
@@ -133,15 +131,14 @@ public class HttpTransportSE extends Transport {
 		connection.setRequestProperty("Content-Length", "" + requestData.length);
 		
 		// Pass the headers provided by the user along with the call
-		/*if (headers != null) {
+		if (headers != null) {
 			for (int i = 0; i < headers.size(); i++) {
 				HeaderProperty hp = (HeaderProperty) headers.get(i);
 				connection.setRequestProperty(hp.getKey(), hp.getValue());
 			}
-		}*/
+		}
 		
-		/* Authentication added 30.6.2011
-		 * */
+
 		
 		connection.setRequestMethod("POST");
 		connection.connect();
