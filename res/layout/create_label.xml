@@ -32,7 +32,7 @@
 		
 	<TextView 
     	android:layout_width="wrap_content" 
-    	android:textSize="28.0sp"
+    	android:textSize="16.0sp"
     	android:layout_height="wrap_content" 
     	android:layout_below="@id/empty_space"
     	android:gravity="center_vertical"
@@ -50,34 +50,34 @@
     	android:ems="7"
     	android:imeOptions="flagNoExtractUi"></EditText>
     <TextView 
-    	android:textSize="28.0sp" 
+    	android:textSize="16.0sp" 
     	android:layout_width="wrap_content" 
     	android:id="@+id/create_date" 
     	android:layout_height="wrap_content"
-    	android:layout_below="@id/serial_prompt"
+    	android:layout_below="@id/manual_serial"
     	android:gravity="center_vertical" 
     	android:text="date" 
     	android:layout_alignParentRight="true"></TextView> 
   	<TextView 
-    	android:textSize="28.0sp" 
+    	android:textSize="16.0sp" 
     	android:layout_width="wrap_content" 
     	android:id="@+id/date_prompt" 
     	android:layout_height="wrap_content"
-    	android:layout_below="@id/serial_prompt"
+    	android:layout_below="@id/manual_serial"
     	android:gravity="center_vertical" 
     	android:text="Today's Date is: " 
     	android:layout_alignParentLeft="true"></TextView> 
     <Button android:layout_width="fill_parent" 
     	android:text="Launch Scanner" 
     	android:onClick="startScanner"
-    	android:layout_height="wrap_content" 
+    	android:layout_height="35dp" 
     	android:layout_below="@id/create_date"
     	android:id="@+id/create_scan" 
     	android:layout_alignParentLeft="true"></Button>
      <Button android:layout_width="fill_parent" 
     	android:text="Create Asset Record with Service-Now and Print Label" 
     	android:onClick="createAsset"
-    	android:layout_height="wrap_content" 
+    	android:layout_height="35dp" 
     	android:layout_below="@id/create_scan"
     	android:id="@+id/send_and_print" ></Button>
     <Button android:text="Main Menu" 
@@ -88,7 +88,7 @@
     <TextView android:layout_height="wrap_content" 
 		android:layout_alignParentBottom="true" 
 		android:text="@string/copyright"
-		android:textSize="10.0sp"
+		android:textSize="8.0sp"
 		android:id="@+id/copyright" 
 		android:layout_width="wrap_content"></TextView>
 </RelativeLayout>

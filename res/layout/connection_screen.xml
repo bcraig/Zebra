@@ -43,7 +43,7 @@
     	
    	<TextView 
     	android:layout_width="wrap_content" 
-    	android:textSize="28.0sp"
+    	android:textSize="16.0sp"
     	android:layout_height="wrap_content" 
     	android:layout_below="@id/status_field"
     	android:gravity="center_vertical"
@@ -73,7 +73,7 @@
    	<TextView android:layout_height="wrap_content" 
 		android:layout_alignParentBottom="true" 
 		android:text="@string/copyright"
-		android:textSize="10.0sp"
+		android:textSize="8.0sp"
 		android:id="@+id/copyright" 
 		android:layout_width="wrap_content"></TextView>
 

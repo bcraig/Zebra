@@ -34,20 +34,20 @@
 		
 	<Button android:layout_width="match_parent"
 		android:text="Create Label" 
-		android:layout_below="@id/prompt" android:layout_height="wrap_content"
+		android:layout_below="@id/prompt" android:layout_height="35dp"
 		android:id="@+id/create"></Button>
 	<Button android:layout_width="match_parent" android:text="Reprint Label"
 		android:layout_below="@id/create" 
-		android:layout_height="wrap_content" android:id="@+id/relabel"></Button>
+		android:layout_height="35dp" android:id="@+id/relabel"></Button>
 	<Button android:layout_width="match_parent" android:text="Inventory"
 	android:layout_below="@id/relabel" 
-		android:layout_height="wrap_content" android:id="@+id/inventory"></Button>
+		android:layout_height="35dp" android:id="@+id/inventory"></Button>
 	<Button android:layout_width="match_parent" android:text="Printer Connection"
 	android:layout_below="@id/inventory" 
-		android:layout_height="wrap_content" android:id="@+id/test_printer"></Button>
+		android:layout_height="35dp" android:id="@+id/test_printer"></Button>
 		
 	<TextView android:layout_height="wrap_content" 
 		android:layout_alignParentBottom="true" android:text="@string/copyright"
-		android:textSize="10.0sp"
+		android:textSize="8.0sp"
 		android:id="@+id/copyright" android:layout_width="wrap_content"></TextView>
 </RelativeLayout>

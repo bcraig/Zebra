@@ -33,7 +33,7 @@
 	
 	<TextView 
     	android:layout_width="wrap_content" 
-    	android:textSize="28.0sp"
+    	android:textSize="16.0sp"
     	android:layout_height="wrap_content" 
     	android:layout_below="@id/empty_space"
     	android:gravity="center_vertical"
@@ -53,21 +53,21 @@
     	android:imeOptions="flagNoExtractUi"></EditText>
     	
 	<TextView 
-    	android:textSize="28.0sp" 
+    	android:textSize="16.0sp" 
     	android:layout_width="wrap_content" 
     	android:id="@+id/date_prompt" 
     	android:layout_height="wrap_content"
-    	android:layout_below="@id/inventory_serial_prompt"
+    	android:layout_below="@id/inventory_manual_serial"
     	android:gravity="center_vertical" 
     	android:text="Today's Date is: " 
     	android:layout_alignParentLeft="true"></TextView> 
     	
     <TextView 
-    	android:textSize="28.0sp" 
+    	android:textSize="16.0sp" 
     	android:layout_width="wrap_content" 
     	android:id="@+id/inventory_date" 
     	android:layout_height="wrap_content"
-    	android:layout_below="@id/inventory_serial_prompt"
+    	android:layout_below="@id/inventory_manual_serial"
     	android:gravity="center_vertical" 
     	android:text="Date" 
     	android:layout_alignParentRight="true"></TextView> 
@@ -77,13 +77,13 @@
     	android:text="Launch Scanner" 
     	android:id="@+id/inventory_scanner" 
     	android:onClick="startScanner"
-    	android:layout_height="wrap_content"
+    	android:layout_height="35dp"
     	android:layout_below="@id/inventory_date"></Button>
     	
    	<Button android:layout_width="fill_parent" 
     	android:text="Update Inventory With Current Asset" 
     	android:onClick="updateInventory"
-    	android:layout_height="wrap_content" 
+    	android:layout_height="35dp" 
     	android:layout_below="@id/inventory_scanner"
     	android:id="@+id/update_inventory" ></Button>	
     	
@@ -97,5 +97,5 @@
 		android:text="@string/copyright"
 		android:id="@+id/copyright" 
 		android:layout_width="wrap_content"
-		android:textSize="10.0sp"></TextView>
+		android:textSize="8.0sp"></TextView>
 	</RelativeLayout>

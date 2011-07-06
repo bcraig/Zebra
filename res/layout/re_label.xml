@@ -31,8 +31,8 @@
 		
 	<TextView 
     	android:layout_width="wrap_content" 
-    	android:textSize="28.0sp"
-    	android:layout_height="wrap_content" 
+    	android:textSize="16.0sp"
+    	android:layout_height="wrap_content"
     	android:layout_below="@id/empty_space"
     	android:gravity="center_vertical"
     	android:id="@+id/reprint_serial_prompt" 
@@ -40,12 +40,12 @@
     	android:layout_alignParentLeft="true"></TextView>
     <EditText android:layout_width="wrap_content" 
     	android:id="@+id/reprint_manual_serial" 
-    	android:layout_height="wrap_content" 
+		android:layout_height="wrap_content"
     	android:layout_below="@id/empty_space"
     	android:layout_alignParentRight="true"
     	android:maxLength="7"
     	android:layout_alignRight="@id/reprint_serial_prompt"
-    	android:ems="7"
+    	android:ems="6"
     	android:singleLine="true"
     	android:imeOptions="flagNoExtractUi"></EditText>
     <Button android:layout_width="fill_parent" 
@@ -54,7 +54,7 @@
     	android:id="@+id/rescan_scanner" 
     	android:onClick="startScanner"
     	android:layout_height="wrap_content"
-    	android:layout_below="@id/reprint_serial_prompt"></Button>
+    	android:layout_below="@id/reprint_manual_serial"></Button>
 	<Button android:layout_height="wrap_content" 
 		android:id="@+id/r_to_main"
 		android:text="Main Menu" 
@@ -63,7 +63,7 @@
 	<TextView android:layout_height="wrap_content" 
 		android:layout_alignParentBottom="true" 
 		android:text="@string/copyright"
-		android:textSize="10.0sp"
+		android:textSize="8.0sp"
 		android:id="@+id/copyright" 
 		android:layout_width="wrap_content"></TextView>
 </RelativeLayout>
